@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Image processor that compresses images and uploads them to AWS S3",
   "type": "module",
-  "main": "selection-creator.js.js",
+  "main": "selection-creator-v2.js",
   "scripts": {
-    "start": "node selection-creator.js"
+    "start": "node selection-creator-v2.js"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.529.1",
@@ -13,6 +13,7 @@
     "@aws-sdk/lib-dynamodb": "^3.529.1",
     "@aws-sdk/s3-request-presigner": "^3.529.1",
     "dotenv": "^16.4.5",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "sharp": "^0.33.3"
   }
 }
