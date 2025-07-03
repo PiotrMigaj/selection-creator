@@ -5,7 +5,7 @@
   "type": "module",
   "main": "selection-creator-v2.js",
   "scripts": {
-    "start": "node selection-creator-v2.js"
+    "start": "node selection-creator-v3.js"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.529.1",

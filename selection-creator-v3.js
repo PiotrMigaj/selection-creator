@@ -52,7 +52,7 @@ const main = async () => {
     const bucketName =
       process.env.S3_BUCKET || (await getInput("Enter S3 bucket name: "));
     const username =
-      process.env.USERNAME || (await getInput("Enter username: "));
+      process.env.CLIENT_USERNAME || (await getInput("Enter client username: "));
     const eventId =
       process.env.EVENT_ID || (await getInput("Enter event ID: "));
     const eventTitle =
@@ -257,6 +257,7 @@ const uploadImagesToS3 = async (
     let contentType = "image/jpeg"; // default
     if (ext === ".png") contentType = "image/png";
     if (ext === ".webp") contentType = "image/webp";
+    if (ext === ".jpeg" || ext === ".jpg") contentType = "image/jpeg";
 
     const command = new PutObjectCommand({
       Bucket: bucketName,
